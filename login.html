@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <a href=""><img src="img/logo.png"</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="xmain">
+        <a href="" class="left">
+          <img src="img/denglu.png" />
+        </a>
+        <div class="right">
+          <div class="right-top">
+            <div class="right-top-tab hover">密码登录</div>
+            <div class="right-top-tab">短信登录</div>
+            <div class="right-top-tab">扫码登录</div>
+          </div>
+          <div class="right-center">
+          <div class="right-center-error">
+            <p class="right-center-error-msg">请输入手机号或邮箱</p>
+          </div>
+          <div class="right-center-fm">
+            <input type="text" class="right-center-fm-text" lack-luck="请输入手机号或邮箱" placeholder="请输入手机号或邮箱">
+          </div>
+          <div class="right-center-fm">
+            <input type="text" class="right-center-fm-text" lack-lucke="请输入登录密码" placeholder="请输入登录密码">
+          </div>
+          <div class="right-center-button">
+            <button class="right-center-button-btn">登录</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let login = document.querySelectorAll(".right-top-tab");
+      for (let i = 0; i < login.length; i++) {
+        login[i].addEventListener("click", function () {
+          for (let i = 0; i < login.length; i++) {
+            console.log(i);
+            login[i].className = "right-top-tab";
+          }
+          this.className = "right-top-tab hover";
+        });
+      }
+    </script>
+  </body>
+</html>
