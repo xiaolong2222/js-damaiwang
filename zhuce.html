@@ -4,83 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>大麦登录</title>
+    <title>大麦PC注册</title>
+    <link rel="stylesheet" href="css/zhuce.css" />
     <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
     <div class="top">
       <div class="logo">
-        <a href=""><img src="img/logo.png"</a>
+        <a href=""><img src="img/logo.png" /></a>
       </div>
     </div>
-    <div class="main">
-      <div class="xmain">
-        <a href="" class="left">
-          <img src="img/denglu.png" />
-        </a>
-        <div class="right">
-          <div class="right-top">
-            <div class="right-top-tab hover">密码登录</div>
-            <div class="right-top-tab">短信登录</div>
-            <div class="right-top-tab">扫码登录</div>
+    <div class="conter-tb">
+      <div class="conter-tb-nav">
+        <div class="nav">
+          <div class="nav-one">
+            <div class="nav-one-js">手机号码:</div>
+            <div class="nav-one-in">
+              <input type="text" />
+            </div>
           </div>
-          <div class="right-ding">
-            <div class="right-center">
-              <div class="right-center-error">
-                <p class="right-center-error-msg">请输入手机号或邮箱</p>
-              </div>
-              <div class="right-center-fm">
-                <input
-                  type="text"
-                  class="right-center-fm-text"
-                  lack-luck="请输入手机号或邮箱"
-                  placeholder="请输入手机号或邮箱"
-                />
-              </div>
-              <div class="right-center-fm">
-                <input
-                  type="password"
-                  class="right-center-fm-text"
-                  lack-lucke="请输入登录密码"
-                  placeholder="请输入登录密码"
-                />
-              </div>
-              <div class="right-center-button">
-                <button class="right-center-button-btn">登录</button>
-              </div>
-              <div class="right-center-tz">
-                <a href="zhuce.html">免费注册</a>
-              </div>
+          <div class="nav-one">
+            <div class="nav-one-js">输入密码:</div>
+            <div class="nav-one-in">
+              <input type="password" placeholder="输入密码" />
             </div>
-            <div class="right-center-phone">
-              <div class="right-center-error">
-                <p class="right-center-error-msg">请输入手机号</p>
-              </div>
-              <div class="right-center-fm">
-                <input
-                  type="text"
-                  class="right-center-fm-text"
-                  lack-luck="请输入手机号"
-                  placeholder="请输入手机号"
-                />
-              </div>
-              <div class="right-center-fm">
-                <input
-                  type="text"
-                  class="right-center-fm-text"
-                  lack-lucke="请输入验证码"
-                  placeholder="请输入验证码"
-                />
-              </div>
-              <div class="right-center-button">
-                <button class="right-center-button-btn">登录</button>
-              </div>
+          </div>
+          <div class="nav-one">
+            <div class="nav-one-js">确认密码:</div>
+            <div class="nav-one-in">
+              <input type="password" placeholder="再次输入密码" />
             </div>
-            <div class="right-center-img">
-              <p class="right-center-img-shou">请升至大麦最新版本</p>
-              <img src="img/erweima.png" />
-              <p>打开<a href="">手机客户端</a><br />扫一扫登录</p>
+          </div>
+          <div class="nav-one">
+            <div class="nav-one-js"></div>
+            <div class="nav-one-in">
+              <input class="nav-one-check" type="checkbox" />
+              <p class="nav-sm">
+                我已阅读接受<a
+                  href="https://help.damai.cn/helpPageH5Context.htm?pageId=38"
+                  target="_blank"
+                  >《大麦会员服务协议》</a
+                ><a
+                  href="https://help.damai.cn/helpPageH5Context.htm?pageId=40"
+                  target="_blank"
+                  >《隐私权政策》</a
+                ><a
+                  href="https://help.damai.cn/helpPageH5Context.htm?pageId=92"
+                  target="_blank"
+                  >《订票服务条款》</a
+                >并同意自动注册成为会员
+              </p>
             </div>
+          </div>
+          <div class="zhuce-btn">
+            <button>同意并注册</button>
           </div>
         </div>
       </div>
@@ -274,82 +251,5 @@
         </div>
       </div>
     </div>
-    <script>
-      let login = document.querySelectorAll(".right-top-tab");
-      let zhanghao = document.querySelector(".right-center");
-      console.log(zhanghao);
-      let shoujin = document.querySelector(".right-center-phone");
-      console.log(shoujin);
-      let erweima = document.querySelector(".right-center-img");
-      console.log(erweima);
-      for (let i = 0; i < login.length; i++) {
-        login[i].addEventListener("click", function () {
-          for (let i = 0; i < login.length; i++) {
-            console.log(i);
-            login[i].className = "right-top-tab";
-          }
-          this.className = "right-top-tab hover";
-          if (this == login[0]) {
-            zhanghao.style.display = "block";
-            shoujin.style.display = "none";
-            erweima.style.display = "none";
-          }
-          if (this == login[1]) {
-            zhanghao.style.display = "none";
-            shoujin.style.display = "block";
-            erweima.style.display = "none";
-          }
-          if (this == login[2]) {
-            zhanghao.style.display = "none";
-            shoujin.style.display = "none";
-            erweima.style.display = "block";
-          }
-        });
-      }
-      let btn = zhanghao.querySelector(".right-center-button-btn");
-      let Oinput = zhanghao.querySelectorAll("input");
-      console.log(Oinput);
-      let tixing = zhanghao.querySelector(".right-center-error");
-      btn.addEventListener("click", function () {
-        if (Oinput[1].value == "") {
-          if (Oinput[0].value == "") {
-            tixing.innerText = "请输入手机号或邮箱";
-            tixing.style.display = "block";
-          } else {
-            tixing.style.display = "none";
-          }
-          tixing.innerText = "请输入登录密码";
-          tixing.style.display = "block";
-        } else {
-          tixing.style.display = "none";
-        }
-        if (Oinput[0].value == "") {
-          tixing.innerText = "请输入手机号或邮箱";
-          tixing.style.display = "block";
-        }
-      });
-      let nav = shoujin.querySelector(".right-center-button-btn");
-      let Input = shoujin.querySelectorAll("input");
-      console.log(Oinput);
-      let Error = shoujin.querySelector(".right-center-error");
-      nav.addEventListener("click", function () {
-        if (Input[1].value == "") {
-          if (Input[0].value == "") {
-            Error.innerText = "请输入手机号";
-            Error.style.display = "block";
-          } else {
-            Error.style.display = "none";
-          }
-          Error.innerText = "请输入验证码";
-          Error.style.display = "block";
-        } else {
-          Error.style.display = "none";
-        }
-        if (Input[0].value == "") {
-          Error.innerText = "请输入手机号";
-          Error.style.display = "block";
-        }
-      });
-    </script>
   </body>
 </html>
