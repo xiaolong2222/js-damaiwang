@@ -98,3 +98,48 @@ let box4 = document.querySelector(".mnbv");
 data(1, 6, box4);
 let right4 = document.querySelector(".bvcx");
 cate(6, 0, right4);
+
+$("a").mouseover(function () {
+  $(this).addClass("om");
+  $(this).mouseout(function () {
+    $(this).removeClass("om");
+  })
+});
+$(".title").mouseover(function () {
+  $(this).addClass("om");
+  $(this).mouseout(function () {
+    $(this).removeClass("om");
+  })
+});
+$(".name-city").mouseover(function () {
+  $(this).addClass("om");
+  $(this).mouseout(function () {
+    $(this).removeClass("om");
+  })
+});
+let fiex = document.querySelector(".fiex-top");
+let xiaz = document.querySelector(".qrcode");
+
+function yichu(a, b) {
+  a.addEventListener("mouseover", function () {
+      b.style.display = "block";
+      
+      a.addEventListener("mouseout", function () {
+        b.style.display = "none";
+      });
+    });
+}
+yichu(fiex, xiaz);
+
+$(".fiex-botton").click(function () {
+  $("body,html").animate({ scrollTop: 0 }, 222,);
+});
+let qg = document.querySelector(".header-cs-qg")
+let btn = document.querySelectorAll(".name-city");
+for (let i = 0; i < btn.length; i++){
+  btn[i].addEventListener("click", function () {
+    yinchang.style.display="none";
+    qg.innerText = this.innerText;
+
+  })
+}

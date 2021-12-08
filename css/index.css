@@ -604,3 +604,91 @@ img {
   height: 30px;
   float: left;
 }
+.fiex {
+  background: #fff;
+  border: 1px solid #ebebeb;
+  width: 80px;
+  position: fixed;
+  right: 10px;
+  top: 65.5%;
+  margin-top: -105px;
+  z-index: 9999;
+}
+.fiex-top {
+  height: 60px;
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+  padding-top: 10px;
+  color: #111;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.fiex-botton {
+  height: 60px;
+  border-bottom: 1px solid #ebebeb;
+  text-align: center;
+  padding-top: 10px;
+  color: #111;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.fiex-top a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+.tubiao {
+  background-image: url(../img/biao6.png);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 32px;
+  height: 29px;
+  background-size: 100%;
+}
+.damai {
+  background-position: 0 4px;
+}
+.gotop {
+  background-position: 4px -64px;
+}
+.fiex-botton p {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.om {
+  color: red !important;
+}
+.qrcode {
+  position: absolute;
+  display: none;
+  width: 72px;
+  height: 72px;
+  left: -92px;
+  top: -6px;
+  box-shadow: 2px 2px 4px #ccc;
+  background: #fff
+    url(//img.alicdn.com/tfs/TB1TBEJSkvoK1RjSZFNXXcxMVXa-280-280.jpg) no-repeat
+    center center;
+  background-size: 90%;
+  padding: 5px;
+}
+.qrcode img {
+  width: 100%;
+}
+.qrcode::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  transform: rotate(-132deg);
+  background: #fff;
+}
