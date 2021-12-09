@@ -38,9 +38,11 @@ function data(a,b,c) {
       $.each(data, function (i, n) {
         $.each(n, function (index, value) {
           str = `
+          <a href="detail.html?${value.pid}" target="_blank">
                 <img class="box-left-bg" src="${value.pimg}"/>
+                </a>
                 <div class="box-left-info">
-                  <div class="title-abc">${value.pname}</div>
+                  <div data-id=${value.pid} class="title-abc">${value.pname}</div>
                   <div class="details">￥${value.pprice}<span>起</span></div>
                 </div>
               `;
@@ -65,7 +67,7 @@ function cate(a, b, c) {
       $.each(data, function (i, n) {
         $.each(n, function (index, value) {
           str +=
-            `<a href="" class="box-right__item" target="_blank">
+            `<a href="detail.html?${value.pid}" class="box-right__item" target="_blank">
              <div class="itemimg">
                <img src="${value.pimg}" />
               </div>
@@ -143,3 +145,12 @@ for (let i = 0; i < btn.length; i++){
 
   })
 }
+
+// let tiao = document.querySelector(".list");
+// let tiaoa = tiao.querySelectorAll("a");
+// console.log(tiaoa);
+// for (let i = 0; i < tiaoa.length; i++){
+//   tiaoa[i].addEventListener("click", function () {
+//    location.href = "list.html";
+//   })
+// }

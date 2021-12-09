@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.lbj {
+  margin-bottom: 64px;
+}
+.ad {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ebebeb;
+  border-top: 0;
+}
+.ad-zhongtou {
+  flex: 1;
+}
+.ad-lanxia {
+  box-sizing: border-box;
+  width: 320px;
+  border-left: 1px solid #ebebeb;
+  padding: 40px 18px 0;
+}
+.ad-zstt {
+  position: relative;
+  padding: 40px 0 30px;
+  min-height: 360px;
+}
+.ad-baokou {
+  padding-left: 330px;
+  font-size: 22px;
+  color: #000;
+}
+.ad-sanfen {
+  position: relative;
+  padding-right: 30px;
+}
+.ad-img {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+  width: 270px;
+  height: 360px;
+}
+.lbj-sanfen {
+  position: relative;
+  font-size: 16px;
+  color: #4a4a4a;
+  margin-top: 21px;
+  zoom: 1;
+}
+.ad-tizhong {
+  display: inline-block;
+}
+.ad-xiazhi {
+  margin-left: 15px;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/dibiao.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  vertical-align: middle;
+}
+.baoluo {
+  color: #999;
+  font-size: 12px;
+  margin: 24px 0 9px;
+}
+.weishao {
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  margin-right: 3px;
+  display: inline-block;
+}
+.kzui {
+  display: flex;
+}
+.kzui-left {
+  display: inline-block;
+  font-size: 16px;
+  color: #000;
+  height: 48px;
+}
+.kzui-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15px;
+  flex: 1;
+}
+.klus {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  float: left;
+  font-size: 12px;
+  padding: 10px 24px;
+  margin: 0 6px 6px 0;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #ff2869;
+  text-align: left;
+  color: #ff1268;
+  background: #fff;
+}
+.xiaoka {
+  margin-top: 30px;
+}
+.number {
+  display: inline-block;
+  font-size: 16px;
+  color: #4a4a4a;
+  vertical-align: top;
+  line-height: 40px;
+}
+.bobu {
+  height: 38px;
+  display: inline-block;
+  line-height: 38px;
+}
+.kd {
+  margin: 0 6px;
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  font-size: 0;
+}
+.kd {
+  float: right;
+}
+.kd-nb {
+  display: inline-block;
+  height: 40px;
+  vertical-align: top;
+  margin-left: 9px;
+  line-height: 40px;
+}
+.kd-qizhi {
+  text-align: center;
+  display: inline-block;
+  margin: 0 4px;
+  padding: 0 18px;
+}
+.kd-jian {
+  display: inline-block;
+  width: 24px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+  color: #000;
+  background-color: #f2f3f4;
+  z-index: 1;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all 0.2s linear;
+  line-height: 26px;
+  height: 28px;
+}
+.kd-input {
+  text-align: center;
+  outline: 0;
+  font-size: 16px;
+  color: #000;
+  width: 17px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  transition: all 0.2s linear;
+  border: none;
+  display: inline-block;
+}
+.kd-long {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #000;
+  vertical-align: middle;
+}
+.kuli-sanfen {
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 210px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #ff2d79;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.detail-right {
+  padding: 24px 15px;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+}
+.ad-kuaxia {
+  margin-bottom: 18px;
+}
+.kuaxia-zz {
+  font-size: 14px;
+}
+.kuaxia-dd {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+}
+.cover {
+  background-image: url(../img/x.png);
+}
+.kuaxia-pp {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #999;
+}
+.polite {
+  background-image: url(../img/v.png);
+}
+.lbj-ad {
+  display: flex;
+  margin-top: 30px;
+  border: 0.5px solid #e2e2e2;
+  background: #fff;
+}
+.lbj-ad-ws {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+}
+.lbj-ad img {
+  height: 90px;
+}

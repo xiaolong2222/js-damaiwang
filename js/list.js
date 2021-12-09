@@ -13,7 +13,7 @@ $.ajax({
         $.each(n, function (index, value) {
           str +=
             `<div class="search__item">
-            <a href="" target="_blank" class="search__item__poster"
+            <a href="detail.html?${value.pid}" target="_blank"  class="search__item__poster"
               ><img src="${value.pimg}" alt=""
             /></a>
             <div class="search__item__info">
@@ -48,7 +48,7 @@ function List(a, b, c) {
           $.each(n, function (index, value) {
             str +=
               `<div class="items">
-              <a class="items__img">
+              <a class="items__img" href="detail.html?${value.pid}" target="_blank">
                 <span class="items__img__tag">体育</span>
                 <img src="${value.pimg}" />
               </a>
@@ -95,7 +95,7 @@ function Main(a, b, c) {
           $.each(n, function (index, value) {
             str +=
               `<div class="items">
-              <a class="items__img">
+              <a class="items__img" href="detail.html?${value.pid}" target="_blank">
                 <span class="items__img__tag">演唱会</span>
                 <img src="${value.pimg}" />
               </a>
@@ -168,3 +168,40 @@ function yichu(a, b) {
     });
 }
 yichu(fiex1, xiaz1);
+
+let factor = document.querySelectorAll(".factor-content-main")[0];
+console.log(factor);
+let opch = factor.querySelectorAll("span");
+console.log(opch);
+let china = document.querySelector(".factor-selected-city");
+for (let i = 0; i < opch.length;i++){
+  opch[i].addEventListener("click", function () {
+    for (let i = 0; i < opch.length; i++) {
+      opch[i].className = "factor-content-item";
+    }
+    this.className = "factor-content-item factor-content-item-default factor-content-item-active";
+    china.innerText = this.innerText;
+      })
+}
+let factor1 = document.querySelectorAll(".factor-content-main")[1];
+let opch1 = factor1.querySelectorAll("span");
+for (let i = 0; i < opch1.length;i++){
+  opch1[i].addEventListener("click", function () {
+    for (let i = 0; i < opch1.length; i++) {
+      opch1[i].className = "factor-content-item";
+    }
+    this.className = "factor-content-item factor-content-item-default factor-content-item-active";
+      })
+}
+
+
+let yulong = document.querySelectorAll(".factor-content")[4];
+let opch2 = yulong.querySelectorAll("span");
+for (let i = 0; i < opch2.length;i++){
+  opch2[i].addEventListener("click", function () {
+    for (let i = 0; i < opch2.length; i++) {
+      opch2[i].className = "factor-content-item";
+    }
+    this.className = "factor-content-item factor-content-item-default factor-content-item-active";
+      })
+}
