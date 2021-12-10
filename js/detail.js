@@ -2,19 +2,19 @@ var vbn = location.search.split("?")[1];
 let lbj = document.querySelector(".ad-zhongtou");
 
 
-$.ajax({
+  $.ajax({
     url: "http://jx.xuzhixiang.top/ap/api/detail.php",
     type: "get",
+    async:false,
     data: {
-        id:vbn,
+      id: vbn,
     },
     success: function (data) {
-        console.log(data);
+      console.log(data);
       let str = "";
-        $.each(data, function (i, n) {
-            console.log(n.pid);
-          str +=
-            `<div class="ad-zstt">
+      $.each(data, function (i, n) {
+        str +=
+          `<div class="ad-zstt">
             <div class="ad-baokou">
               <div class="ad-yuantou">
                 <img class="ad-img" src="${n.pimg}" />
@@ -81,15 +81,50 @@ $.ajax({
               </div>
             </div>
           </div>`;
-        })
-        lbj.innerHTML = str;
+      })
+      lbj.innerHTML = str;
     }
+  })
+
+
+let jiana = document.querySelectorAll(".kd-jian")[0];
+console.log(jiana);
+let jiaa = document.querySelectorAll(".kd-jian")[1];
+let shul = document.querySelector(".kd-input");
+shul.value = 1;
+console.log(shul);
+let count = 1;
+jiana.addEventListener("click", function () {
+  count--
+  if (count <= 1) {
+    count = 1;
+  }
+  shul.value = count;
 })
-  
-$(document).on("mouseover", function () {
-    $(".kd-input").val("1");
+jiaa.addEventListener("click", function () {
+  count++
+  shul.value = count;
 })
-$(document).on("click", ".kd-jian:eq(0)", function() {
-    console.log("222");
-    $(".kd-input").val("1");
-});
+
+
+let ad = document.querySelector(".kuli-sanfen");
+
+ad.addEventListener("click", function () {
+
+  let num = shul.value;
+  console.log(num);
+  $.ajax({
+    url: "http://jx.xuzhixiang.top/ap/api/add-product.php",
+    type: "get",
+    async: false,
+    data: {
+      pid: vbn,
+      uid: 74824,
+      pnum:num,
+    },
+    success: function (data) {
+      console.log(data);
+    }
+  })
+  window.open("cart.html");
+})
