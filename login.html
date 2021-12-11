@@ -32,7 +32,7 @@
               <div class="right-center-fm">
                 <input
                   type="text"
-                  class="right-center-fm-text"
+                  class="right-center-fm-text input11"
                   lack-luck="请输入手机号或邮箱"
                   placeholder="请输入手机号或邮箱"
                 />
@@ -40,13 +40,13 @@
               <div class="right-center-fm">
                 <input
                   type="password"
-                  class="right-center-fm-text"
+                  class="right-center-fm-text input22"
                   lack-lucke="请输入登录密码"
                   placeholder="请输入登录密码"
                 />
               </div>
               <div class="right-center-button">
-                <button class="right-center-button-btn">登录</button>
+                <button class="right-center-button-btn btn22">登录</button>
               </div>
               <div class="right-center-tz">
                 <a href="zhuce.html">免费注册</a>
@@ -274,6 +274,7 @@
         </div>
       </div>
     </div>
+    <script src="js/jquery.js"></script>
     <script>
       let login = document.querySelectorAll(".right-top-tab");
       let zhanghao = document.querySelector(".right-center");
@@ -348,6 +349,28 @@
         if (Input[0].value == "") {
           Error.innerText = "请输入手机号";
           Error.style.display = "block";
+        }
+      });
+      let btn22 = document.querySelector(".btn22");
+      console.log(btn22);
+      let input11 = document.querySelector(".input11");
+      console.log(input11);
+      let input22 = document.querySelector(".input22");
+      console.log(input22);
+      btn22.addEventListener("click", function () {
+        if (input11.value != "" && input22 != "") {
+          $.ajax({
+            url: "http://jx.xuzhixiang.top/ap/api/login.php",
+            type: "get",
+            data: {
+              username: input11.value,
+              password: input22.value,
+            },
+            success: function (data) {
+              window.location.href = "index.html";
+              alert("登录成功");
+            },
+          });
         }
       });
     </script>

@@ -12,7 +12,7 @@ $.ajax({
       $.each(data, function (i, n) {
         $.each(n, function (index, value) {
           str +=
-            `<table>
+            `<table class="zuidade">
             <colgroup>
               <col style="width: 5%" />
               <col style="width: 35%" />
@@ -25,7 +25,7 @@ $.ajax({
             </colgroup>
             <tbody>
               <tr class="next-table-row last first">
-                <td><input type="checkbox" /></td>
+                <td><input class="cheak" type="checkbox" /></td>
                 <td
                   class="single next-table-cell first"
                   colspan="1"
@@ -66,7 +66,7 @@ $.ajax({
                   </div>
                 </td>
                 <td class="next-table-cell">
-                  <div class="next-table-cell-wrapper">${value.pprice}</div>
+                  <div class="next-table-cell-wrapper jiage">${value.pprice}</div>
                 </td>
                 <td class="next-table-cell">
                   <div class="next-table-cell-wrapper jiajian">
@@ -83,7 +83,7 @@ $.ajax({
                     <span class="total">${value.pprice*value.pnum}</span>
                   </div>
                 </td>
-                <td>删除</td>
+                <td data-id=${value.pid} class="sancu">删除</td>
               </tr>
             </tbody>
           </table>`;
@@ -92,4 +92,3 @@ $.ajax({
       })
     }
 })
-console.log(00);
